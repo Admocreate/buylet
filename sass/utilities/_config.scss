@@ -1,0 +1,71 @@
+// Font Stacks
+
+//$font-url : 'https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Playfair+Display:700';
+
+@mixin do-font-face($name, $file-name, $url, $type, $weight, $style){
+  @font-face {
+    font-family: $name;
+    //src: url(#{$url + $file-name}.eot);
+    //src: url(#{$url + $file-name}.eot?#iefix) format('embedded-opentype');
+    @if $type == "otf"{
+      src: url(#{$url + $file-name}.otf) format('opentype');
+    }
+    @if $type == "ttf"{
+      src: url(#{$url + $file-name}.ttf) format('truetype');
+    }
+    @if $type == "woff"{
+      src: url(#{$url + $file-name}.woff);
+    }
+    @if $type == "woff2"{
+      src: url(#{$url + $file-name}.woff2);
+    }
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+
+@include do-font-face('OpenSans', 'OpenSans-Li', '../fonts/', 'ttf', 300, normal);
+@include do-font-face('OpenSans', 'OpenSans-Regular', '../fonts/', 'ttf', normal, normal);
+@include do-font-face('OpenSans', 'OpenSans-Semibold', '../fonts/', 'ttf', 500, normal);
+@include do-font-face('OpenSans', 'OpenSans-Bold', '../fonts/', 'ttf', bold, normal);
+@include do-font-face('OpenSans', 'OpenSans-ExtraBold', '../fonts/', 'ttf', 900, normal);
+@include do-font-face('Axiforma', 'Axiforma-Bold', '../fonts/', 'otf', 700, normal);
+
+$opensans        : 'OpenSans', sans-serif;
+$axiforma      : 'Axiforma', sans-serif;
+
+$ffh            : $opensans;
+$ffb            : $opensans;
+
+$light          : 300;
+$normal         : normal;
+$semibold       : 500;
+$bold           : bold;
+$black-weight   : 900;
+
+// Colors
+$midnight-blue: #302D5D;
+$green      : #05CCB9;
+$light-green: #82E6DC;
+$purple     : #a12ad8;
+$black      : #16182D;
+
+$dark-blue: #171F78;
+$grey : #737481;
+$cyan: #CDF5F1;
+
+
+
+$blue       : #246DFB;
+$blue-grey  : #8492a5;
+$blue-light : #4578D7;
+$mid-grey   : #C5C6C5;
+// $light-grey : #F6F7FB;
+$dark-grey  : #5c5c5c;
+$dark-grey  : #707070;
+$darker-grey: #444444;
+$red        : #D6186F;
+$muted-green: #25CEA0;
+$yellow     : #FFFC2A;
+$orange     : #FD5F20;

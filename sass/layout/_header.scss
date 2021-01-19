@@ -1,0 +1,60 @@
+.home {
+    position: relative;
+    background-image: url(../img/home.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 100vh;
+
+    .home-text {
+    margin-top: 69px;
+        &_heading {
+            position: relative;
+            font-size: 48px;
+            font-weight: $bold;
+            color: $purple;
+    
+            
+        }
+        &_heading::before {
+            position: absolute;
+            content: "";
+            background-color: $light-green;
+            height: 16px;
+            width: 330px;
+            top: 40px;
+            left: 25px;
+            z-index: -1;
+        }
+    }
+    
+}
+
+.header-nav {
+    display: flex;
+    list-style: none;
+    
+    a:nth-child(odd)  {
+        padding: 0  20px;
+    }
+     a {
+        color: $grey;
+        text-align: center;
+        padding: 5px 1px;
+        text-decoration: none;
+        font-size: 17px;
+        border-bottom: 3px solid transparent;
+        border-bottom: 1px solid $cyan;
+    
+    
+    }
+    
+     a:hover {
+        border-bottom: 3px solid $green;
+        color: $midnight-blue;
+    }
+    
+     a.active {
+        border-bottom: 3px solid $green;
+    }
+}
+

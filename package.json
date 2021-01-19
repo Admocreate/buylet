@@ -1,0 +1,17 @@
+{
+  "name": "buyletlive",
+  "version": "1.0.0",
+  "description": "property app",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/main.css -w"
+  },
+  "author": "Tola",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.32.4"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
